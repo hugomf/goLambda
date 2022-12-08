@@ -21,8 +21,9 @@ export class DeployStack extends cdk.Stack {
       handler: lambdaFunction,
       description: "Exposed endpoint for your GO lambda API",
       deployOptions: {
-        stageName: 'dev',
+        stageName: 'cd .',
       }
+
     });
   
     // Output the DNS of your API gateway deployment
