@@ -19,9 +19,8 @@ export class DeployStack extends cdk.Stack {
 
     const api = new apigateway.LambdaRestApi(this, 'go-lambda', {
       handler: lambdaFunction,
-      description: "Exposed endpoint for your GO lambda API",
       deployOptions: {
-        stageName: 'cd .',
+        stageName: 'dev',
       }
 
     });
